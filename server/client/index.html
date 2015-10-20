@@ -1,0 +1,20 @@
+<doctype! html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+<script src="app.js"></script>
+</head>
+<body ng-app="app">
+  <div ng-controller="queryController">
+      <form ng-submit="submit(); query.text=''">
+        <input type='text' ng-model='query.text' size='100'>
+        <input type='submit' value='Send'>
+      </form>
+    <div>QUERY: {{query.text}}</div>
+    <div ng-repeat="key in tables">
+      <a href='#' editable-text='key' ng-change="change()" ng-model="key">{{key || "empty"}}</a>
+    </div>
+  </div>
+</body>
+</html>
