@@ -4,7 +4,7 @@ angular.module('app',["xeditable"])
     text:''
   };
 
-  $scope.test='holy shit'
+  $scope.test='hello world';
 
   $scope.tables = [];
   $scope.headers = $scope.tables;
